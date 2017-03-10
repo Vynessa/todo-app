@@ -66,7 +66,7 @@
         <input type="text" id="new-task" placeholder="Add new Task"></input><button id="add-task">Add</button>
 
         <h3>Uncompleted Tasks</h3>
-        <ul>
+        <ul id="uncomplete-tasks">
             <li><input type="checkbox"><label>Get Wipes from Shoprite</label></li>
             <li><input type="checkbox"><label>Buy Plantain</label></li>
         </ul>
@@ -84,7 +84,7 @@
                 $("#add-task").click(function(){
                     var newTask = $("#new-task").val();
                     console.log(newTask)
-                    $("ul").append("<li><input type='checkbox'><label>"+newTask+"</label></li>")
+                    $("#uncomplete-tasks").append("<li><input type='checkbox'><label>"+newTask+"</label></li>")
                 });
             });
 
